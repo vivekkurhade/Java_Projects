@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"       
+	xmlns:p="http://www.springframework.org/schema/p"  
+	xmlns:context="http://www.springframework.org/schema/context"   
+	xmlns:tx="http://www.springframework.org/schema/tx"  
+	xmlns:aop="http://www.springframework.org/schema/aop"  
+	xsi:schemaLocation="http://www.springframework.org/schema/beans    
+	http://www.springframework.org/schema/beans/spring-beans.xsd    
+	http://www.springframework.org/schema/aop    
+	http://www.springframework.org/schema/aop/spring-aop.xsd    
+	http://www.springframework.org/schema/tx    
+	http://www.springframework.org/schema/tx/spring-tx.xsd    
+	http://www.springframework.org/schema/context    
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- service -->
+	<bean id="deptService" class="pers.hdh.management.service.impl.DeptServiceImpl">
+		<property name="baseDao" ref="baseDao" />
+	</bean>
+	<bean id="userService" class="pers.hdh.management.service.impl.UserServiceImpl">
+		<property name="baseDao" ref="baseDao" />
+		<property name="mailMessage" ref="mailMessage" ></property>
+		<property name="mailSender" ref="mailSender"></property>
+	</bean>
+	<bean id="roleService" class="pers.hdh.management.service.impl.RoleServiceImpl">
+		<property name="baseDao" ref="baseDao" />
+	</bean>
+	<bean id="moduleService" class="pers.hdh.management.service.impl.ModuleServiceImpl">
+		<property name="baseDao" ref="baseDao" />
+	</bean>
+	
+	
+	<bean id="contractService" class="pers.hdh.management.service.impl.ContractServiceImpl">
+		<property name="baseDao" ref="baseDao" />
+	</bean>
+	<bean id="contractProductService" class="pers.hdh.management.service.impl.ContractProductServiceImpl">
+		<property name="baseDao" ref="baseDao" />
+	</bean>
+	<bean id="extCproductService" class="pers.hdh.management.service.impl.ExtCproductServiceImpl">
+		<property name="baseDao" ref="baseDao" />
+	</bean>
+	<bean id="factoryService" class="pers.hdh.management.service.impl.FactoryServiceImpl">
+		<property name="baseDao" ref="baseDao" />
+	</bean>
+	
+	
+	<bean id="exportService" class="pers.hdh.management.service.impl.ExportServiceImpl">
+		<property name="baseDao" ref="baseDao" />
+	</bean>
+	<bean id="exportProductService" class="pers.hdh.management.service.impl.ExportProductServiceImpl">
+		<property name="baseDao" ref="baseDao" />
+	</bean>
+	<bean id="extEproductService" class="pers.hdh.management.service.impl.ExtEproductServiceImpl">
+		<property name="baseDao" ref="baseDao" />
+	</bean>
+	<bean id="packingListService" class="pers.hdh.management.service.impl.PackingListServiceImpl">
+		<property name="baseDao" ref="baseDao" />
+	</bean>
+	
+	
+	
+</beans>
